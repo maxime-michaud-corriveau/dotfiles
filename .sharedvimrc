@@ -1,3 +1,7 @@
+nnoremap n nzz
+nnoremap gd gdzz
+nnoremap '' ''zz
+
 inoremap jj <Esc>
 inoremap kj <Esc>
 inoremap jk <Esc>
