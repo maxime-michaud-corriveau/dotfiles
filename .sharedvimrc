@@ -1,0 +1,14 @@
+inoremap jj <Esc>
+inoremap kj <Esc>
+inoremap jk <Esc>
+inoremap kk <Esc>
+
+inoremap ZZ <Esc>ZZ
+
+inoremap <A-h> <Left>
+inoremap <A-j> <Down>
+inoremap <A-k> <Up>
+inoremap <A-l> <Right>
+
+set rnu
+set number

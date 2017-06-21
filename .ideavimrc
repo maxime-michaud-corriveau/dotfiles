@@ -1,0 +1,6 @@
+source ~/.sharedvimrc
+
+"Emule le plugin vim-surround: https://github.com/tpope/vim-surround
+set surround
+
+nnoremap ZB :action Annotate<CR> :action Annotate<CR>
