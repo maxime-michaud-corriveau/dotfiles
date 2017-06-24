@@ -7,3 +7,4 @@ nnoremap ZB :action Annotate<CR> :action Annotate<CR>
 nnoremap gn :action GotoNextError<CR>
 nnoremap gF :action FindUsages<CR>
 nnoremap gf :action FindUsagesInFile<CR>
+nnoremap ff :action SearchEverywhere<CR>
