@@ -5,5 +5,5 @@ set surround
 
 nnoremap ZB :action Annotate<CR> :action Annotate<CR>
 nnoremap gn :action GotoNextError<CR>
-nnoremap gf :action FindUsages<CR>
-nnoremap gF :action FindUsagesInFile<CR>
+nnoremap gF :action FindUsages<CR>
+nnoremap gf :action FindUsagesInFile<CR>
