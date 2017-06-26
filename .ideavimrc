@@ -8,3 +8,7 @@ nnoremap gn :action GotoNextError<CR>
 nnoremap gF :action FindUsages<CR>
 nnoremap gf :action FindUsagesInFile<CR>
 nnoremap ff :action SearchEverywhere<CR>
+
+"Uses vim to switch tab instead of the intellij tab switcher
+noremap <C-Tab> gt
+noremap <S-C-Tab> gT
