@@ -1,6 +1,6 @@
 nnoremap n nzz
 nnoremap gd gdzz
-nnoremap '' ''zz
+nnoremap '' `'zz
 
 inoremap jj <Esc>
 inoremap kj <Esc>
