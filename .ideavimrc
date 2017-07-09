@@ -1,6 +1,6 @@
 source ~/.sharedvimrc
 
-"Emule le plugin vim-surround: https://github.com/tpope/vim-surround
+" https://github.com/tpope/vim-surround
 set surround
 
 nnoremap ZB :action Annotate<CR> :action Annotate<CR>
@@ -8,7 +8,9 @@ nnoremap gn :action GotoNextError<CR>
 nnoremap gF :action FindUsages<CR>
 nnoremap gf :action FindUsagesInFile<CR>
 nnoremap ff :action SearchEverywhere<CR>
+nnoremap == :action ReformatCode<CR>
 
-"Uses vim to switch tab instead of the intellij tab switcher
+" Uses vim to switch tab instead of the intellij tab switcher
 noremap <C-Tab> gt
 noremap <S-C-Tab> gT
+
