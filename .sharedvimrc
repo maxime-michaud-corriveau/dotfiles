@@ -19,3 +19,10 @@ set number
 
 set ignorecase
 set smartcase
+
+let mapleader = " "
+
+nnoremap <Leader>j <C-W>j
+nnoremap <Leader>k <C-W>k
+nnoremap <Leader>h <C-W>h
+nnoremap <Leader>l <C-W>l
