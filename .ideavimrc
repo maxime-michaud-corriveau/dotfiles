@@ -14,3 +14,5 @@ nnoremap == :action ReformatCode<CR>
 noremap <C-Tab> gt
 noremap <S-C-Tab> gT
 
+" Replaces the inoremap ;<CR> ;<CR> in .sharedvimrc because running this commands causes intellij to insert two <CR>
+inoremap ;<CR> ;
