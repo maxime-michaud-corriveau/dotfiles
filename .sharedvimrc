@@ -27,3 +27,6 @@ nnoremap <Leader>j <C-W>j
 nnoremap <Leader>k <C-W>k
 nnoremap <Leader>h gT
 nnoremap <Leader>l gt
+
+inoremap ; ;<Esc>
+inoremap ;<CR> ;<CR>
