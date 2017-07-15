@@ -29,8 +29,11 @@ set tabstop=4
 
 "Automatically inserts closing brackets
 inoremap {} {<CR><CR>}<C-o>%<C-o>=%<down>
-inoremap [] [<CR><CR>]<C-o>%<C-o>=%<down>
-inoremap <> <<CR><CR>><C-o>%<C-o>=%<down>
+inoremap ( ()<LEFT>
+inoremap [ []<LEFT>
+inoremap < <><LEFT>
+
+nnoremap <CR> i<CR><Esc>
 
 "Disables gvim menus 
 set guioptions-=m  "remove menu bar
