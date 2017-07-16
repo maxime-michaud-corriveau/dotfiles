@@ -33,8 +33,6 @@ inoremap ( ()<LEFT>
 inoremap [ []<LEFT>
 inoremap < <><LEFT>
 
-nnoremap <CR> i<CR><Esc>
-
 "Disables gvim menus 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
