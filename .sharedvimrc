@@ -30,3 +30,6 @@ nnoremap <Leader>l gt
 
 inoremap ; ;<Esc>
 inoremap ;<CR> ;<CR>
+
+nnoremap <CR> i<CR><Esc>
+
