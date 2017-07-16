@@ -32,6 +32,17 @@ colorscheme solarized
 "Line/column numbers
 set ruler
 
+nnoremap / /\v
+
+set expandtab
+set tabstop=4
+
+"Automatically inserts closing brackets
+inoremap {} {<CR><CR>}<C-o>%<C-o>=%<down>
+inoremap ( ()<LEFT>
+inoremap [ []<LEFT>
+inoremap < <><LEFT>
+
 "Disables gvim menus 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
