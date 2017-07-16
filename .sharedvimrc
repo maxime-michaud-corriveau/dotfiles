@@ -34,3 +34,4 @@ inoremap ; ;<Esc>
 inoremap ;; ;
 inoremap ;<CR> ;<CR>
 
+nnoremap <CR> i<CR><Esc>
