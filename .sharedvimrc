@@ -31,7 +31,6 @@ nnoremap <Leader>l gt
 " Exits insert mode after typing ;, unless it's typed twice or the next
 " character is a carriage return
 inoremap ; ;<Esc>
-inoremap ;; ;
 inoremap ;<CR> ;<CR>
 
 nnoremap <CR> i<CR><Esc>
