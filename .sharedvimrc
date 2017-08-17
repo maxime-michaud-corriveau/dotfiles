@@ -22,15 +22,10 @@ set smartcase
 
 let mapleader = " "
 
-" Allows changing window with space+{hjkl}
+" Allows changing window or tab with space+{hjkl} (sucks for vsplits tho)
 nnoremap <Leader>j <C-W>j
 nnoremap <Leader>k <C-W>k
 nnoremap <Leader>h gT
 nnoremap <Leader>l gt
-
-" Exits insert mode after typing ;, unless it's typed twice or the next
-" character is a carriage return
-inoremap ; ;<Esc>
-inoremap ;<CR> ;<CR>
 
 nnoremap <CR> i<CR><Esc>
