@@ -22,7 +22,7 @@ set smartcase
 
 let mapleader = " "
 
-" Allows changing window with space+{hjkl}
+" Allows changing window or tab with space+{hjkl} (sucks for vsplits tho)
 nnoremap <Leader>j <C-W>j
 nnoremap <Leader>k <C-W>k
 nnoremap <Leader>h gT
