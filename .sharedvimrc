@@ -9,10 +9,10 @@ inoremap kk <Esc>
 
 inoremap ZZ <Esc>ZZ
 
-noremap <A-h> <Left>
-noremap <A-j> <Down>
-noremap <A-k> <Up>
-noremap <A-l> <Right>
+noremap <A-h> <C-o>h
+noremap <A-j> <C-o>j
+noremap <A-k> <C-o>k
+noremap <A-l> <C-o>l
 
 set rnu
 set number
