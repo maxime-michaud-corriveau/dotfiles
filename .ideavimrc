@@ -15,3 +15,4 @@ noremap <S-C-Tab> gT
 
 inoremap <C-f> <Esc>:action SearchEverywhere<CR>
 nnoremap <C-f> :action SearchEverywhere<CR>
+nnoremap ZV :action IntroduceVariable<CR>i
