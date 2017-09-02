@@ -29,3 +29,7 @@ nnoremap <Leader>h gT
 nnoremap <Leader>l gt
 
 nnoremap <CR> i<CR><Esc>
+
+inoremap <A-A> <C-o>A
+inoremap <A-o> <C-o>o
+inoremap <A-O> <C-o>O
