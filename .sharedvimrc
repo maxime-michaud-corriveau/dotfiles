@@ -31,5 +31,6 @@ nnoremap <Leader>l gt
 nnoremap <CR> i<CR><Esc>
 
 inoremap <A-A> <C-o>A
+inoremap <A-I> <C-o>I
 inoremap <A-o> <C-o>o
 inoremap <A-O> <C-o>O
