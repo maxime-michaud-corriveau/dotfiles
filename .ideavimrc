@@ -7,12 +7,15 @@ nnoremap ZB :action Annotate<CR> :action Annotate<CR>
 nnoremap gn :action GotoNextError<CR>
 nnoremap gF :action FindUsages<CR>
 nnoremap gf :action FindUsagesInFile<CR>
-nnoremap <C-f> :action SearchEverywhere<CR>
-nnoremap == :action ReformatCode<CR>
+nnoremap == :action ReformatCode<CR><C-A-O>
 
 " Uses vim to switch tab instead of the intellij tab switcher
 noremap <C-Tab> gt
 noremap <S-C-Tab> gT
 
-" Replaces the inoremap ;<CR> ;<CR> in .sharedvimrc because running this commands causes intellij to insert two <CR>
-inoremap ;<CR> ;
+inoremap <C-f> <Esc>:action SearchEverywhere<CR>
+nnoremap <C-f> :action SearchEverywhere<CR>
+nnoremap ZV :action IntroduceVariable<CR>i
+nnoremap <leader><leader> :nohls<CR>
+nnoremap R :action Hotswap<CR>
+nnoremap ZQ :action CloseAllEditorsButActive<CR>
