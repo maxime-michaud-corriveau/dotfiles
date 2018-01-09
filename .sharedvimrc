@@ -2,12 +2,12 @@ nnoremap n nzz
 nnoremap gd gdzz
 nnoremap '' `'zz
 
-inoremap jj j<Esc>
-inoremap kj <Esc>
-inoremap jk <Esc>
-inoremap kk k<Esc>
+inoremap jj <Esc><Esc>
+inoremap kj <Esc><Esc>
+inoremap jk <Esc><Esc>
+inoremap kk <Esc><Esc>
 
-inoremap ZZ <Esc>ZZ
+inoremap ZZ <Esc><Esc>ZZ
 
 noremap <A-h> <C-o>h
 noremap <A-j> <C-o>j

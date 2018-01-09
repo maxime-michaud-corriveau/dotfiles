@@ -19,3 +19,4 @@ nnoremap ZV :action IntroduceVariable<CR>i
 nnoremap <leader><leader> :nohls<CR>
 nnoremap R :action Hotswap<CR>
 nnoremap ZQ :action CloseAllEditorsButActive<CR>
+inoremap <ESC> <ESC><ESC>
