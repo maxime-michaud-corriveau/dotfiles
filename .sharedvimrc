@@ -1,6 +1,8 @@
 nnoremap n nzz
 nnoremap gd gdzz
 nnoremap '' `'zz
+nnoremap ' `
+nnoremap ` '
 
 inoremap jj <Esc><Esc>
 inoremap kj <Esc><Esc>
@@ -38,3 +40,4 @@ inoremap <A-o> <C-o>o
 inoremap <A-O> <C-o>O
 
 nnoremap ZJ :%join<CR>
+
