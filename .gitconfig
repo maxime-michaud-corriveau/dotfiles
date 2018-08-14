@@ -1,0 +1,11 @@
+[credential]
+	helper = manager
+
+[merge]
+	ff=only
+	
+[help]
+	autoCorrect = 2
+
+[alias]
+	yolo = commit --amend -C HEAD --all
