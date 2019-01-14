@@ -3,9 +3,28 @@
 
 [merge]
 	ff=only
-	
+	branchDesc=true
+	log=true
+	conflictstyle=diff3
+	tool=vimdiff3
 [help]
 	autoCorrect = 2
 
 [alias]
+	merge-with-less-stupid-conflicts = merge --strategy-option diff-algorithm=patience --strategy-option ignore-all-space
+	rebase-with-less-stupid-conflicts = rebase --strategy-option diff-algorithm=patience --strategy-option ignore-all-space
 	yolo = commit --amend -C HEAD --all
+	force-push = push --force-with-lease
+	ignore = "!git update-index --assume-unchanged $*"
+	unignore = "!git update-index --no-assume-unchanged $*"
+
+	#Common typoes
+	dif = diff
+	git = "!git "
+	got = "!git "
+	gut = "!git "
+
+[core]
+	ignorecase = false
+[rerere]
+	enabled = 1
