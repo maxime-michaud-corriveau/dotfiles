@@ -40,8 +40,16 @@ vnoremap zv :vsc ReSharper.ReSharper_IntroVariable<CR>
 noremap <C-F> :vsc ReSharper.ReSharper_GotoType<CR>
 noremap <C-A-Q> :vsc ReSharper.ReSharper_GotoType<CR>
 
+nnoremap ZG :vsc ReSharper.ReSharper_Generate<CR>
+
 " In visual/insert mode, remap ctrl + v/p to copy/paste from system clipboard 
 vnoremap <C-V> "+p
-inoremap <C-V> <C-O>"+p
+inoremap <C-V> <C-O>"+P
 vnoremap <C-C> "+y
 inoremap <C-C> <C-O>"+y
+
+nnoremap ZQ :tabonly<CR>
+
+nnoremap <Leader>dd :vsc Debug.Start<CR>
+nnoremap <Leader>dr :vsc Debug.Restart<CR>
+nnoremap <Leader>ds :vsc Debug.StopDebugging<CR>
