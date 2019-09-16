@@ -1,5 +1,5 @@
 nnoremap n nzz
-nnoremap gd gdzz
+nnoremap gd mDgdzz
 nnoremap '' `'zz
 nnoremap ' `
 nnoremap ` '

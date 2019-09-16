@@ -26,3 +26,7 @@ nnoremap gD mD:action GotoImplementation<CR>
 
 " Requires AceJump IDE plugin
 nnoremap Q :action AceAction<CR>
+
+vnoremap <C-c> "+y
+inoremap <C-v> <C-o>"+P
+vnoremap <C-v> "+P

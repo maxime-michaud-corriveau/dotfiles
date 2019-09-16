@@ -5,8 +5,6 @@
 	ff=only
 	branchDesc=true
 	log=true
-	conflictstyle=diff3
-	tool=vimdiff3
 [help]
 	autoCorrect = 2
 
@@ -24,7 +22,15 @@
 	got = "!git "
 	gut = "!git "
 
+	reset-csproj = "!git status --porcelain | awk '{$1=$1};1' | cut -f 2 -d \" \" | grep .*csproj | xargs git checkout HEAD"
+	amend-content-only = "!echo :wq | git commit --amend"
+	es-tu-vraiment-sur-de-ce-que-tu-fais = "!git amend-content-only && git force-push"
+	checkout- = checkout -
+	conf = "!vim ~/.gitconfig"
+	safe-clean = "!if (git status --porcelain | grep ^??); then echo unsafe git clean, aborting; else git clean -fdx; fi"
+
 [core]
 	ignorecase = false
+	autocrlf = false
 [rerere]
 	enabled = 1
