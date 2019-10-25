@@ -11,7 +11,6 @@
 [alias]
 	merge-with-less-stupid-conflicts = merge --strategy-option diff-algorithm=patience --strategy-option ignore-all-space
 	rebase-with-less-stupid-conflicts = rebase --strategy-option diff-algorithm=patience --strategy-option ignore-all-space
-	yolo = commit --amend -C HEAD --all
 	force-push = push --force-with-lease
 	ignore = "!git update-index --assume-unchanged $*"
 	unignore = "!git update-index --no-assume-unchanged $*"
@@ -23,11 +22,24 @@
 	gut = "!git "
 
 	reset-csproj = "!git status --porcelain | awk '{$1=$1};1' | cut -f 2 -d \" \" | grep .*csproj | xargs git checkout HEAD"
-	amend-content-only = "!echo :wq | git commit --amend"
+	amend-content-only = commit --amend -C HEAD
+	yolo = "!git amend-content-only --all"
 	es-tu-vraiment-sur-de-ce-que-tu-fais = "!git amend-content-only && git force-push"
 	checkout- = checkout -
 	conf = "!vim ~/.gitconfig"
 	safe-clean = "!if (git status --porcelain | grep ^??); then echo unsafe git clean, aborting; else git clean -fdx; fi"
+	checkout-deleted-files = "!git status --porcelain | grep ^D | cut -f 3 -d ' ' | xargs git checkout HEAD"
+	wip = "!f() { \
+			if [[ $1 == 'pop' ]]; then \
+				git wip-pop; \
+			else \
+				echo iWIP mmc ${*}ZZ | git commit -a; \
+			fi \
+		}; f"
+	wip-pop = "!git show -q | awk '{$1=$1};1' | grep '^WIP mmc' && git reset --mixed HEAD~ || echo No wip on current branch"
+	pull-from = "!git pull --rebase=interactive --autostash origin"
+	pull-from-master = "!git pull-from master"
+	pfm = "!git pull-from-master"
 
 [core]
 	ignorecase = false
