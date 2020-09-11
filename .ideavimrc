@@ -1,9 +1,11 @@
 source ~/.sharedvimrc
 
-" https://github.com/tpope/vim-surround
 set surround
+set multiple-cursors
+set exchange
+set highlightedyank
 
-nnoremap ZB :action Annotate<CR> :action Annotate<CR>
+nnoremap ZB :action Annotate<CR>
 nnoremap gn :action GotoNextError<CR>
 nnoremap gF :action FindUsages<CR>
 nnoremap gf :action FindUsagesInFile<CR>
@@ -21,6 +23,7 @@ nnoremap <leader><leader> :nohls<CR>
 nnoremap R :action Hotswap<CR>
 nnoremap ZQ :action CloseAllEditorsButActive<CR>
 inoremap <ESC> <ESC><ESC>
+nnoremap ZG :action Generate<CR>
 
 nnoremap gD mD:action GotoImplementation<CR>
 
@@ -30,3 +33,11 @@ nnoremap Q :action AceAction<CR>
 vnoremap <C-c> "+y
 inoremap <C-v> <C-o>"+P
 vnoremap <C-v> "+P
+
+nnoremap <Leader>h gT
+nnoremap <Leader>l gt
+
+vnoremap <C-f> "fy/<C-R>f<CR>
+
+nnoremap ZR :action Refactorings.QuickListPopupAction<CR>
+nnoremap vnn diwiValidate.Is.Not.Null(<ESC>pa, nameof(<ESC>pa))<ESC>

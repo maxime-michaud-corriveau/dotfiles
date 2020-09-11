@@ -2,7 +2,6 @@ nnoremap n nzz
 nnoremap gd mDgdzz
 nnoremap '' `'zz
 nnoremap ' `
-nnoremap ` '
 
 inoremap jj <Esc><Esc>
 inoremap kj <Esc><Esc>
