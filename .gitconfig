@@ -45,12 +45,8 @@
 	apply-stash = "!git stash list | grep $1 | cut -f 1 -d : | git stash apply && echo Applied stash: "
 	clean-merged-branches = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
 
-	use-dev-vhosts = "!sed -b -i 's/core.mamcorriveau/core.dev/g' **/appsettings.* .config/appsettings.*"
-	use-own-vhosts = "!sed -b -i 's/core.dev/core.mamcorriveau/g' **/appsettings.* .config/appsettings.*"
-	pr = "!f() { C:/'Program Files (x86)'/Google/Chrome/Application/chrome.exe alm.sherweb.com/tfs/DefaultCollection/Sherweb/Storm/_git/$( git get-repository-name )/pullrequestcreate?targetRef=master$( echo '&' )sourceRef=$( git get-branch-name ); }; f"
 	get-repository-name = "!basename `git rev-parse --show-toplevel`"
 	get-branch-name = "!git rev-parse --abbrev-ref HEAD"
-	new-branch-pr = "!f() { git push --set-upstream origin $( git get-branch-name ); git pr; }; f"
 [core]
 	ignorecase = false
 	autocrlf = false
@@ -58,4 +54,4 @@
 	enabled = 1
 [user]
 	name = Maxime Michaud-Corriveau
-	email = mamcorriveau@sherweb.com
+	email = maximemichaud22@gmail.com

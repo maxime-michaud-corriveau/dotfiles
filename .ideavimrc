@@ -40,4 +40,3 @@ nnoremap <Leader>l gt
 vnoremap <C-f> "fy/<C-R>f<CR>
 
 nnoremap ZR :action Refactorings.QuickListPopupAction<CR>
-nnoremap vnn diwiValidate.Is.Not.Null(<ESC>pa, nameof(<ESC>pa))<ESC>
