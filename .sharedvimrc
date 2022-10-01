@@ -40,4 +40,6 @@ inoremap <A-O> <C-o>O
 
 nnoremap ZJ :%join<CR>
 
-nnoremap <leader>s, f,dbf,wviwpF,P
+nnoremap gc /\v(public\|internal\|protected\|private) \w+(\<.+\>)?\(<CR>w
+			
+

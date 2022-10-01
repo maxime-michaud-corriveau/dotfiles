@@ -31,6 +31,7 @@ nnoremap gD mD:action GotoImplementation<CR>
 nnoremap Q :action AceAction<CR>
 
 vnoremap <C-c> "+y
+nnoremap <C-c> "+y
 inoremap <C-v> <C-o>"+P
 vnoremap <C-v> "+P
 
@@ -41,3 +42,10 @@ vnoremap <C-f> "fy/<C-R>f<CR>
 
 nnoremap ZR :action Refactorings.QuickListPopupAction<CR>
 nnoremap vnn diwiValidate.Is.Not.Null(<ESC>pa, nameof(<ESC>pa))<ESC>
+vnoremap ZS :action SurroundWith<CR>
+nmap ZS VZS
+
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>
+
+nnoremap git :!git

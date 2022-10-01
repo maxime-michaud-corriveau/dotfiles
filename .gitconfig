@@ -9,6 +9,7 @@
 	autoCorrect = 2
 
 [alias]
+	cherry-pick-with-less-stupid-conflicts = cherry-pick --strategy-option diff-algorithm=patience --strategy-option ignore-all-space
 	merge-with-less-stupid-conflicts = merge --strategy-option diff-algorithm=patience --strategy-option ignore-all-space
 	rebase-with-less-stupid-conflicts = rebase --strategy-option diff-algorithm=patience --strategy-option ignore-all-space
 	force-push = push --force-with-lease
@@ -43,14 +44,20 @@
 	pf = "!git pull-from"
 	stash-use = "!git stash push -m \"$*\" && git stash apply && echo Applied stash: "
 	apply-stash = "!git stash list | grep $1 | cut -f 1 -d : | git stash apply && echo Applied stash: "
+	amend = "!git commit --amend"
 	clean-merged-branches = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
 
 	use-dev-vhosts = "!sed -b -i 's/core.mamcorriveau/core.dev/g' **/appsettings.* .config/appsettings.*"
 	use-own-vhosts = "!sed -b -i 's/core.dev/core.mamcorriveau/g' **/appsettings.* .config/appsettings.*"
-	pr = "!f() { C:/'Program Files (x86)'/Google/Chrome/Application/chrome.exe alm.sherweb.com/tfs/DefaultCollection/Sherweb/Storm/_git/$( git get-repository-name )/pullrequestcreate?targetRef=master$( echo '&' )sourceRef=$( git get-branch-name ); }; f"
+	pr = "!f() { C:/'Program Files (x86)'/Google/Chrome/Application/chrome.exe https://dev.azure.com/SWEngineering/Cumulus/_git/$( git get-repository-name )/pullrequestcreate?targetRef=master$( echo '&' )sourceRef=$( git get-branch-name ); }; f"
 	get-repository-name = "!basename `git rev-parse --show-toplevel`"
 	get-branch-name = "!git rev-parse --abbrev-ref HEAD"
-	new-branch-pr = "!f() { git push --set-upstream origin $( git get-branch-name ); git pr; }; f"
+	new-branch = "!f() { git push --set-upstream origin $( git get-branch-name ); }; f"
+	new-branch-pr = "!git new-branch && git pr"
+	task = "!f() { C:/'Program Files (x86)'/Google/Chrome/Application/chrome.exe https://dev.azure.com/SWEngineering/Sherweb/_workitems/edit/$1; }; f"
+	current-task = "!git get-branch-name | cut -d '/' -f 2 | xargs git task"
+	fix-commit = "!git commit --amend && git push -f"
+	compare-commits = "!f() {  C:/'Program Files (x86)'/Google/Chrome/Application/chrome.exe https://dev.azure.com/SWEngineering/Cumulus/_git/$( git get-repository-name )/branches?baseVersion=GC${1}$( echo '&' )targetVersion=GC${2}&_a=files; }; f"
 [core]
 	ignorecase = false
 	autocrlf = false
